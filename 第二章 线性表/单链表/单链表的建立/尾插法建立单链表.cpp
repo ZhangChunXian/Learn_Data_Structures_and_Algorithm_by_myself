@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 typedef struct LNode                //定义单链表的结点类型
 {
@@ -53,7 +55,7 @@ bool ListInsert(LinkList &L, int i, int e)
 
     p->next = s;                        // 将结点s连到p之后
 
-    return ture;
+    return true;
 }
 
 /*
