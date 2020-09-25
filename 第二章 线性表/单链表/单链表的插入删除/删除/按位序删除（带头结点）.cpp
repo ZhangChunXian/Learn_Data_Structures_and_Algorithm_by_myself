@@ -35,7 +35,7 @@ bool ListDelete(LinkList &L, int i, int &e)
     int j=0;            // j代表的是当前p指向的是第几个结点
     p = L;              // L指向头结点，头结点是第零个绩点，通常不存放数据
 
-    while( P != NULL && j < i1)
+    while( p != NULL && j < i-1)
     {
         p = p->next;
         j++;
@@ -51,6 +51,6 @@ bool ListDelete(LinkList &L, int i, int &e)
     p->next = q->next;                  // 将*q结点从链中“断开”
 
     free(q);                            // 释放结点的存储空间
-    return ture;
+    return true;
 
 }
