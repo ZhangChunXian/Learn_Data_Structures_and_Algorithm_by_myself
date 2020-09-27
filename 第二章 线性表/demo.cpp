@@ -1,19 +1,21 @@
-// 顺序表的按位查找
-
-
 #include <iostream>
 using namespace std;
 
-#define INITSIZE 10                 // 顺序表的初始长度
+// 动态顺序表的按值查找
+
 
 // 定义动态顺序表数据类型
 typedef struct{
     int *data;                      // 指示动态分配数组的指针
     int MaxSize;                    // 顺序表的最大容量
     int length;                     // 顺序表的当前长度
-}SeqList;                           // 顺序表的类型定义(动态分配方式)
+}SeqList;
 
-int GetElement_from_Dynamic_SeqList(SeqList &L, int i){
-    if ( i > 0 && i <= L.length)  return L.data[i-1];
+// 按值查找动态顺序表
+int Locate_Element(SeqList L, int e){
+    for(int i = 0; i < L.length, i++){
+        if(L.data[i] == e)
+            return i+1;              // 数组下标为i的元素值为e，其顺序为第i+1个。
+    }
+    return 0;
 }
-
