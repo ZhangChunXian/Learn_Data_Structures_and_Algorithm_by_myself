@@ -1,5 +1,5 @@
 #include <iostream>
-
+using namespace std;
 // 动态顺序表的基本操作_插入
 
 // 定义动态顺序表数据类型
@@ -47,6 +47,7 @@ bool Insert_SeqList(SeqList &L, int i, int e){
     L.data = (int *)malloc((L.length + 1) * sizeof(int));
 
     if(!L.data) return false;                     // 内存分配失败
+
     for(int j=0; j<i-1 ; j++)
         L.data[j] = p[j];
 
@@ -57,6 +58,27 @@ bool Insert_SeqList(SeqList &L, int i, int e){
 
     L.length++;
 
+    for(int j=0; j< L.length; j++)
+        cout << L.data[j] << "\t";
+
     return true;
 }
 
+int main()
+{
+    SeqList L;
+    InitList(L);
+    L.data[0] = 0;
+    L.data[1] = 1;
+    L.data[2] = 2;
+    L.data[3] = 3;
+    L.data[4] = 4;
+    L.data[5] = 5;
+    L.data[6] = 6;
+    L.data[7] = 7;
+    L.data[8] = 8;
+    L.data[9] = 9;
+    L.data[10] = 10;
+
+    Insert_SeqList(L, 9, 19);
+}

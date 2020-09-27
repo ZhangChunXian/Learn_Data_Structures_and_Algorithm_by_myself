@@ -11,7 +11,7 @@ typedef struct{
 }SqList;                                // 顺序表的类型定义
 
 // 初始化静态线性表
-void InitList(Sqlist &L){
+void InitList(SqList &L){
     L.length = 0;
 
     for (int i = 0; i <MAXSIZE; i++){
@@ -51,6 +51,7 @@ int main(){
     /*
     其他代码
     */
+
     ListInsert(L, 3, 3);
     return 0;
 }
