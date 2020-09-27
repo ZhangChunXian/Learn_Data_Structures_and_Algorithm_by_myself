@@ -9,7 +9,7 @@ typedef struct{
 
 // 基本操作————初始化一个顺序表
 void InitList(Sqlist &L){
-    for(int i = 0; i < MAXSIZE; i++>)
+    for(int i = 0; i < MAXSIZE; i++)
         L.data[i] = 0;         // 将所有数据接哦古设置为默认初始值
     L.length = 0;              // 顺序表初始长度为0。
 }
