@@ -26,7 +26,7 @@ bool ListDelete(SqList &L, int i, int &e){
 
     e = L.data[i-1];                       // 将被删除的元素赋值给e
 
-    for(int j=i; j<L.length(); j++)
+    for(int j=i; j<L.length; j++)
         L.data[j-1] = L.data[j];
 
     L.length--;                            // 线性表长度减1
