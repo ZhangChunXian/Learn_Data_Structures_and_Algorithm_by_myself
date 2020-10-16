@@ -1,3 +1,4 @@
+#include <iostream>
 // 静态表的实现————静态分配
 
 #define MAXSIZE 10            // 定义最大长度
