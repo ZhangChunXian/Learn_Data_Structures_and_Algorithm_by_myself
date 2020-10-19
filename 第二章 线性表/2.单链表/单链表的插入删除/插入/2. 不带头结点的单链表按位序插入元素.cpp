@@ -1,8 +1,4 @@
-typedef struct LNode
-{
-    int data;
-    struct LNode *next;
-}LNode, *LinkList;
+#include "header.h"
 
 
 bool ListInsert(LinkList &L, int i, int e)
@@ -11,7 +7,7 @@ bool ListInsert(LinkList &L, int i, int e)
         return false;
     if (i == 1)
     {   // 插入第一个结点的操作与其他结点的操作不同
-        LNode *s = (Lnode *)malloc(sizeof(LNode));
+        LNode *s = (LNode *)malloc(sizeof(LNode));
         s->data = e;
         s->next = L;
         L = s;      // 头指针指向头结点
