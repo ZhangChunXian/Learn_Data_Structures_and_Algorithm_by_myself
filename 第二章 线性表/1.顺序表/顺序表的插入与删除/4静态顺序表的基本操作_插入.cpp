@@ -23,28 +23,19 @@ void InitList(SqList &L)
 }
 
 // 函数实现基本操作：在L的位序i处插入元素e
-void ListInsert(SqList &L, int i, int e)
-{
-    for (int j = L.length; j >= i; j--) // 在第i个元素及之后的元素后移
-        L.data[j] = L.data[j - 1];
-    L.data[i - 1] = e; // 在位置i放入e
-
-    L.length++; // 顺序表的长度+1
-}
-
 // 修改ListInsert函数，增加函数的健壮性
 bool ListInsert(SqList &L, int i, int e)
 {
-    if (i < 1 || i > L.length + 1) // 判断i的范围是否有效
+    if (i < 1 || i > L.length + 1)              // 判断i的范围是否有效
         return false;
-    if (L.length >= MAXSIZE) // 当前存储空间已满，不能插入
+    if (L.length >= MAXSIZE)                    // 当前存储空间已满，不能插入
         return false;
 
-    for (int j = L.lenth; j >= i; j--) // 将第i个元素及之后的元素后移
+    for (int j = L.length; j >= i; j--)         // 将第i个元素及之后的元素后移
         L.data[j] = L.data[j - 1];
 
-    L.data[i - 1] = e; // 在位置i处放入e
-    L.length++;        // 长度加1
+    L.data[i - 1] = e;                          // 在位置i处放入e
+    L.length++;                                 // 长度加1
 }
 
 int main()
