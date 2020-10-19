@@ -2,6 +2,9 @@
 2. 设计一个高效算法, 将顺序表L的所有元素置逆, 要求算法的空间复杂度位O(1)
 */
 
+
+// 静态顺序表
+
 #include <iostream>
 #include <string>
 
