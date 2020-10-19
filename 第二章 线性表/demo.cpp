@@ -1,34 +1,31 @@
-#include <iostream>
-using namespace std;
-
-typedef struct LNode            // 定义单链表数据类型
+#include <stdio.h>
+#include <stdlib.h>
+int main()
 {
-    int data;                   // 每个节点存放一个数据类型
-    struct LNode *next;         // 指针指向下一个节点
-}LNode, *LinkList;
-
-
-// 初始化一个空的单链表
-bool InitList(LinkList &L){
-    L = NULL;                   // 空表, 暂时没有任何结点, 防止脏数据
-    return true;
-}
-
-void test()
-{
-    LinkList L;                 // 声明一个指向单链表的指针
-
-    // 初始化一个单链表
-    InitList(L);
-    // 后续代码
-}
-
-// 判断单链表是否为空
-bool Empty(LinkList L)
-{
-    if (L == NULL)
-        return true;
-    else
-        return false;
-
+ 
+    enum color { red=1, green, blue };
+ 
+    enum  color favorite_color;
+ 
+    /* 用户输入数字来选择颜色 */
+    printf("请输入你喜欢的颜色: (1. red, 2. green, 3. blue): ");
+    scanf("%u", &favorite_color);
+ 
+    /* 输出结果 */
+    switch (favorite_color)
+    {
+    case red:
+        printf("你喜欢的颜色是红色");
+        break;
+    case green:
+        printf("你喜欢的颜色是绿色");
+        break;
+    case blue:
+        printf("你喜欢的颜色是蓝色");
+        break;
+    default:
+        printf("你没有选择你喜欢的颜色");
+    }
+ 
+    return 0;
 }
