@@ -8,7 +8,8 @@ typedef struct LNode{
     struct LNode *next;
 }LNode, *LinkList;
 
-struct LNode *p = (struct LNode *) malloc(sizeof(struct LNode));  //增加一个新的结点：在内存中申请一个结点所需的空间
+struct LNode *p = (struct LNode *) malloc(sizeof(struct LNode));  
+//增加一个新的结点：在内存中申请一个结点所需的空间
 
 // 不带头结点的单链表
 
