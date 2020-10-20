@@ -1,4 +1,5 @@
 // 删除指定结点
+#include "header.h"
 
 bool DeleteNode (LNode *p)
 {
@@ -8,7 +9,7 @@ bool DeleteNode (LNode *p)
     LNode *q = p->next;     // 令q指向*p的后继结点
 
     p->data = p->next->data;// 和后继结点交换数据域
-    
+
     p->next = q->next;      // 将*q结点从链中“断开”
 
     free(q);
@@ -19,3 +20,5 @@ bool DeleteNode (LNode *p)
 // 如果p是最后一个结点
 // 只能从表头开始依次寻找p的前驱
 bool DeleteNode (LNode *p)
+
+// 如果p结点是最后一个结点, 那么只能从表头开始寻找p的前驱, 时间复杂度为O(n)
