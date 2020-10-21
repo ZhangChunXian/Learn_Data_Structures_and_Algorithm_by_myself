@@ -37,7 +37,7 @@ bool Push(SqStack &S, int x)
 }
 
 // 出栈操作
-bool Pop(SqStack &S, int &x);
+bool Pop(SqStack &S, int &x)
 {
     if (S.top == -1)               // 栈空, 报错
         return false;
