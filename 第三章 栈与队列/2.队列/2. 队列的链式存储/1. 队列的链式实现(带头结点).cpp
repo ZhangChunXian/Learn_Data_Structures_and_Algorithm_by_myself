@@ -77,3 +77,25 @@ void EnQueue(LinkQueue &Q, int x)
     Q.rear->next =s;                                        // 新结点插入到rear之后
     Q.rear = s;                                             // 修改表尾指针
 }
+
+// 队头元素出队(不带头结点)
+bool DeQueue(LinkQueue &Q, int &x)
+{
+    if (Q.rear = Q.front)
+        return false;                                       // 空队
+
+    LinkNode *p = Q.front->next;
+    x = p->data;
+
+    Q.front->next = p->next;                                // 修改头结点的next指针
+    /**
+     * ! 注意考虑特殊情况!
+     */
+    if (Q.rear == p)                                        // 判定是否为最后一个结点出队
+    {
+        Q.rear = Q.front;                                   // 修改rear指针
+    }
+    free(p);                                                // 释放结点空间
+
+    return true;
+}
