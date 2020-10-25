@@ -1,7 +1,4 @@
-
 #include <iostream>
-
-
 
 // 建立链结点数据结构
 typedef struct                      // 链式队列的结点
@@ -37,29 +34,7 @@ void testLinkQueue()
 // 判断队列是否为空
 bool IsEmpty(LinkQueue Q)
 {
-    if (Q.front == Q.rear)
-        return true;
-    else
-        return false;
-}
-
-
-
-/* 不带头结点的版本 */
-
-// 初始化队列(不带头结点)
-void InitQueue(LinkQueue &Q)
-{
-    // 初始时, front, rear都指向NULL
-    Q.front = NULL;
-    Q.rear = NULL;
-}
-
-// 判断队列是否为空, 不带头结点
-
-bool IsEmpty(LinkQueue Q)
-{
-    if (Q.front == NULL)
+    if (Q.front == Q.rear)  // 也可以用Q.front == NULL 来判断
         return true;
     else
         return false;
@@ -74,7 +49,7 @@ void EnQueue(LinkQueue &Q, int x)
     s->data = x;
 
     s->next = NULL;
-    Q.rear->next =s;                                        // 新结点插入到rear之后
+    Q.rear->next = s;                                       // 新结点插入到rear之后
     Q.rear = s;                                             // 修改表尾指针
 }
 

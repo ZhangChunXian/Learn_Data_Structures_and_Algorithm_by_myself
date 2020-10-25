@@ -41,7 +41,7 @@ bool EnQueue(SqQueue &Q, int x)
 bool DeQueue(SqQueue &Q, int &x)
 {
     if (Q.rear == Q.front)
-        return false; // 队空则报错
+        return false; // 队空则报错, 也可以用size == 0判断队空
 
     x = Q.data[Q.front];
     Q.front = (Q.front + 1) % MAXSIZE;

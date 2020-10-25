@@ -27,7 +27,7 @@ void InitQueue(LinkQueue &Q)
 
 bool IsEmpty(LinkQueue Q)
 {
-    if (Q.front == NULL)
+    if (Q.front == NULL)            // 也可以通过Q.rear == NULL来判断
         return true;
     else
         return false;

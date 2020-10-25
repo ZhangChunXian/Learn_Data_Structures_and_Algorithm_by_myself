@@ -44,7 +44,7 @@ bool EnQueue(SqQueue &Q, int x)
 // 出队(删除一个对头元素, 并用x返回)
 bool DeQueue(SqQueue &Q, int &x)
 {
-    if (Q.rear == Q.front && tag == 0)
+    if (Q.rear == Q.front && Q.tag == 0)
         return false; // 队空则报错
 
     x = Q.data[Q.front];

@@ -19,6 +19,11 @@ void testQueue()
 {
     SqQueue Q; // 声明一个队列(顺序存储)
     InitQueue(Q);
+
+    for(int i = 0; i < MAXSIZE; i++)            // 将所有值都初始化为零
+    {
+        Q.data[i] = 0;
+    }
 }
 
 
