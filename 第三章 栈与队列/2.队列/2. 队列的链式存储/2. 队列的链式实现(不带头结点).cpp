@@ -61,17 +61,17 @@ bool DeQueue(LinkQueue &Q, int &x)
     if (Q.front == NULL && Q.rear == NULL)
         return false;                                       // 空指针返回错误
 
-    if (Q.front == Q.rear)                                  // 判定是否为最后一个结点
+    LinkNode *p = Q.front;                                  // p指向此次出队的结点
+    x = p->data;                                            // 用变量x返回对头元素
+    Q.front = p->next;                                      // 修改头结点的next指针
+    /**
+     * ! 注意考虑特殊情况!
+     */
+    if (Q.rear == p)                                        // 最后一个结点出队
     {
-        free(Q.front);
-        Q.front = NULL;
-        Q.rear = NULL;
-        return true;
+        Q.front == NULL;                                    // front指向NULL
+        Q.rear = NULL;                                      // rear指向NULL
     }
-
-    LinkNode *p = Q.front;
-    x = p->data;
-    Q.front = Q.front->next;                                // 修改头结点的next指针
-    free(p);
+    free(p);                                                // 释放结点空间
     return true;
 }

@@ -1,3 +1,4 @@
+#include <iostream>
 
 #define MAXSIZE 10 // 定义队列中元素的最大个数
 
