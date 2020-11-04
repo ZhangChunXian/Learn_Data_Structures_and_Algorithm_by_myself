@@ -53,7 +53,7 @@ void EnQueue(LinkQueue &Q, int x)
     Q.rear = s;                                             // 修改表尾指针
 }
 
-// 队头元素出队(不带头结点)
+// 队头元素出队(带头结点)
 bool DeQueue(LinkQueue &Q, int &x)
 {
     if (Q.rear = Q.front)
