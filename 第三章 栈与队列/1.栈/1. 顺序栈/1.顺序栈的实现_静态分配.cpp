@@ -7,7 +7,7 @@ typedef struct                // 单个顺序栈
 }SqStack;
 
 // 初始化顺序栈
-void InitStack(SqStack &s)
+void InitStack(SqStack &S)
 {
     S.top = -1;                // 初始化栈顶指针
 }

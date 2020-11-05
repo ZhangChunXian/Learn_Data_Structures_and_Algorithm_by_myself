@@ -76,5 +76,5 @@ bool GetHead(SqQueue Q, int &x)
     return true;
 }
 
-// 队列的元素个数 (rear + MAXSIZE - front) % MAXSIZE
+// 队列的元素个数 (rear + MAXSIZE - front) % MAXSIZE, 条件是front指向对头元素, rear指向队尾元素的后一个位置
 
