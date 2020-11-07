@@ -28,16 +28,24 @@ bool Init_SeqList(SeqList &L)
     return true;
 }
 
-bool Dynamic_List_Delete(SeqList &L, int i, int &e)
+bool ListDelete(SqList &L, int i, int &e)
 {
     if (i < 1 || i > L.length)
         return false; // 判断i的范围是否有效
 
-    e = L.data[i - 1];
+    int *p = L.data;
 
-    for (int j = i; j < L.length; j++)
-        L.data[j - 1] = L.data[j];
+    L.data = (int *)malloc((L.length - 1) * sizeof(int));
+
+    if (!data)
+        return false; // 内存分配失败
+
+    for (int j = i - 1; j < L.length - 1; j++)
+    {
+        L.data[j] = p[j + 1];
+    }
 
     L.length--;
+
     return true;
 }
