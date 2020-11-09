@@ -15,12 +15,11 @@ bool InitList(LinkList &L){
 
 // 判断循环单链表是否为空
 bool Verify_Empty_LNode(LinkList L){
-    if (L->next == L)   return true;
-    else return false;
+    return (L->next == L);
 }
 
 // 判断某一个结点p是否为循环单链表的表尾结点
-bool is_Tail(LinkList L, LNode *p){
-    if (p->next == L) return true;
-    else return false;
+bool is_Tail(LinkList L, LNode *p)
+{
+    return (p->next == L);
 }

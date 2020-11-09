@@ -50,6 +50,7 @@ bool Insert_Next_DNode(DNode *p, DNode *s)
     s->prior = p;
 
     p->next = s;
+    return true;
 }
 
 // 双链表的删除

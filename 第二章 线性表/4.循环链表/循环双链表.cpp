@@ -7,6 +7,14 @@ typedef struct DNode {
     struct DNode *prior, *next;
 }DNode, *DLinkList;
 
+// 函数声明
+// 初始化一个循环双链表
+bool Init_DList(DLinkList &L);
+// 判断一个双链表是否为空
+bool Verify_Empty_DNode(DLinkList L);
+// 判断某一个结点p是否为尾结点
+bool Verify_Last_DNode(DNode *p, DNode *L);
+
 // 初始化一个循环双链表
 bool Init_DList(DLinkList &L){
     L = (DNode *)malloc(sizeof(DNode));            // 分配一个头结点

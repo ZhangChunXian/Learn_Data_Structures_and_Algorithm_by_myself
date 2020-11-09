@@ -27,7 +27,7 @@ bool InitList(LinkList &L){
 void test(){
     LinkList L;
 
-    InitList(L)
+    InitList(L);
 }
 
 typedef struct LNode{
