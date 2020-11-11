@@ -4,5 +4,8 @@
     "files.associations": {
         "xstring": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "maxn"
+    ]
 }

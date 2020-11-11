@@ -1,22 +1,16 @@
-#include <iostream>
+#include <stdio.h>
 
-typedef struct LNode
+int main()
 {
-    int data;
-    struct LNode *next;
-}LNode, *LinkList;
+    int a = -1;
 
-bool InitLinkList(LinkList &L)
-{
-    L = (LNode *)malloc(sizeof(LNode));
+    switch(a)
+    {
+        case -1:
+            printf("Success!");
+        default:
+        break;
+    }
 
-    if (L == NULL) return false;
-
-    L->next = L;
-    return true;
-}
-
-bool IsTail(LinkList L, LNode *p)
-{
-    return (p->next == L);
+    return
 }
