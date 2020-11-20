@@ -1,13 +1,9 @@
-#include <stdio.h>
-
-int initializer(void)
-{
-    return 50;
-}
+#include <iostream>
+using namespace std;
 
 int main()
 {
-    static int i = initializer();
-    printf("%d\n", i);
-    return 0;
+    cout << "Hello World";
+
+    return -1;
 }
