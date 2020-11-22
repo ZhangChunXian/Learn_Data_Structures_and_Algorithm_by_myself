@@ -1,23 +1,18 @@
+#include <iostream>
+using namespace std;
 
+int i = 100, sum = 0;
 
-
-bool Judge(char A[])
+int main()
 {
-    int i = 0, cnt = 0;                 // i为下标, cnt为计数器, 输入+1, 输出-1
+    double i = 1.1, *p = &i;
+    double &r = *p;
+    double *q = NULL;
 
-    for(; A[i] != '\0'; i++)
-    {
-        if(A[i] == 'I')
-        {
-            cnt++;
-        }
-        if(A[i] == 'O')
-        {
-            cnt--;
-        }
+    cout << "i = " << i << endl;
+    cout << "*p = " << *p << endl;
+    cout << "r = " << r << endl;
 
-        if (cnt < 0) return false;
-    }
+    return 0;
 
-    return (cnt == 0);
 }
