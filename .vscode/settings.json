@@ -3,7 +3,8 @@
     "files.autoSave": "afterDelay",
     "files.associations": {
         "xstring": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "iostream": "cpp"
     },
     "cSpell.words": [
         "ltag",
