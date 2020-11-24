@@ -12,6 +12,7 @@ BiTNode *pre = NULL;                        // pre指向当前访问结束的前
 BiTNode *final = NULL;                      // final用于记录最终结果
 
 
+
 //? 定义数据结构
 // 定义非线索二叉树的数据结构
 typedef struct BiTNode
@@ -29,12 +30,14 @@ typedef struct ThreadNode
 }ThreadNode, *ThreadTree;
 
 
+
 //? 函数声明
 void InOrder(BiTree T);                 // 中序遍历
 
 void visit(BiTNode *q);                 // 访问结点q
 
 void InThread(ThreadTree T);            // 中序遍历二叉树, 一边遍历一边线索化
+
 
 
 //? 函数定义

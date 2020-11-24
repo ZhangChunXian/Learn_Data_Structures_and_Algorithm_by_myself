@@ -22,30 +22,30 @@ ThreadNode *pre = NULL;
 
 //? 函数声明
 // 前序定义二叉树, 一边遍历一边线索化
-void PreThread(ThreadTree T);
+void PostThread(ThreadTree T);
 
 void visit(ThreadNode *q);
 
 // 中序线索化二叉树T
-void CreatePreThread(ThreadNode T);
+void CreatePostThread(ThreadNode T);
 
 
 
 //? 函数定义
-void PreThread(ThreadTree T)
+void PostThread(ThreadTree T)
 {
     if(T != NULL)
     {
-        visit(T);               // 访问根节点
         if(T->ltag == 0)        // lchild不是前驱结点
         {
-            PreThread(T->lchild);
+            PostThread(T->lchild);
         }
 
         if(T->rtag == 0) // rchild不是前驱结点
         {
-            PreThread(T->rchild);
+            PostThread(T->rchild);
         }
+        visit(T);               // 访问根节点
     }
 }
 
@@ -69,13 +69,13 @@ void visit(ThreadNode *q)
 
 
 //! 前序线索化
-void CreatePreThread(ThreadTree T)   // 中序线索化二叉树
+void CreatePostThread(ThreadTree T)   // 中序线索化二叉树
 {
     pre = NULL;       // pre被初始化为NULL
 
     if(T != NULL)
     {
-        PreThread(T);
+        PostThread(T);
 
         if(pre->rchild == NULL)
         {

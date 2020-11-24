@@ -28,6 +28,8 @@ void visit(ThreadNode *q);
 // 中序线索化二叉树T
 void CreateInThread(ThreadNode T);
 
+
+
 //? 函数定义
 void InThread(ThreadTree T)
 {
@@ -37,13 +39,11 @@ void InThread(ThreadTree T)
         {
             InThread(T->lchild);
         }
-        InThread(T->lchild);
         visit(T);                           // 访问根节点
         if (T->rtag == 0)                   // rchild不是前驱结点
         {
             InThread(T->rchild);
         }
-        InThread(T->rchild);
     }
 }
 
@@ -75,7 +75,7 @@ void CreateInThread(ThreadTree T)           // 中序线索化二叉树T
     {
         InThread(T);                        // 中序线索化二叉树
 
-        if (pre->child == NULL)
+        if (pre->rchild == NULL)
         {
             pre->rtag = 1;                  // 处理遍历后的最后一个结点
         }

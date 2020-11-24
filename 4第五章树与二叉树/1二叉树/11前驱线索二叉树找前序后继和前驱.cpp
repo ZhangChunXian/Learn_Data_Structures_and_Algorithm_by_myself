@@ -68,8 +68,8 @@ void visit(ThreadNode *q)
 
 
 
-//! 前序线索化
-void CreatePreThread(ThreadTree T)   // 中序线索化二叉树
+//! 中序线索化
+void CreateInThread(ThreadTree T)   // 中序线索化二叉树
 {
     pre = NULL;       // pre被初始化为NULL
 
@@ -82,4 +82,6 @@ void CreatePreThread(ThreadTree T)   // 中序线索化二叉树
             pre->rtag = 1;                    // 处理遍历后的最后一个结点
         }
     }
+
+
 }
