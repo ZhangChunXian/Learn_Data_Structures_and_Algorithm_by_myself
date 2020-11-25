@@ -19,19 +19,39 @@ typedef struct CSNode
 
 
 //? 函数声明
-// 树的先根遍历
-
-
 //! 伪代码
+
+
+// 树的先根遍历
 void PreOrder(TreeNode *R)
 {
     if (R != NULL)
     {
         visit(R);       // 访问根节点
+        while (R还有下一个子树T)
+        {
+            PreOrder(T);      // 先根遍历下一棵子树
+        }
     }
 
-    while (R还有下一个子树T)
+
+}
+
+// 树的后根遍历, 深入优先遍历
+void PostOrder(TreeNode *R)
+{
+    if (R != NULL)
     {
-        PreOrder(T);      // 先根遍历下一棵子树
+        while(R还有下一个子树T)
+        {
+            PostOrder(T);       // 后跟遍历下一棵子树
+        }
+
+        visit(R);               // 访问根节点
     }
 }
+
+
+
+// 树的层次遍历(用队列实现) 广度优先遍历
+
