@@ -10,7 +10,7 @@
 //串的定长顺序存储
 typedef struct
 {
-    char ch[MAXSIZE];               // 每个分量存储衣蛾字符
+    char ch[MAXSIZE];               // 每个分量存储字符
     int length;                     // 串的实际长度
 }SString;
 

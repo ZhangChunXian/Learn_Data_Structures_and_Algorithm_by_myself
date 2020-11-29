@@ -1,16 +1,25 @@
 #include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
 using namespace std;
+using std::string;
 
-int main()
-{
-    int errNumb = 0;
-    int *const curErr = &errNumb;
-    const int i = -1, &r = 0;
+class Solution {
+public:
+    int findContentChildren(vector<int>& g, vector<int>& s) {
+        sort(g.begin(), g.end());
+        sort(s.begin(), s.end());
 
-    const double pi = 3.14159;
-    const double *const pip = &pi;
+        int child = 0, cookie = 0;
 
-    cout << *curErr << endl;
+        while (child < g.size() && cookie < s.size())
+        {
+            if (g[child] <= s[cookie]) ++child;
+            ++cookie;
+        }
 
-    return 0;
-}
+        return child;
+    }
+};
