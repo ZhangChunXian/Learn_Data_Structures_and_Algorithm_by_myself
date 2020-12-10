@@ -1,6 +1,6 @@
 //? 头文件
 #include <iostream>
-
+using namespace std;
 
 
 //? 宏定义
@@ -30,7 +30,7 @@ int Index(SString S, SString T);                                  // 定位操�
 bool SubString(SString &Sub, SString S, int pos, int len)           // 求子串. 用Sub返回串S的第pos个字符起长度为len的子串
 {
     // 判断子串范围是否越界
-    if (pos + len - 1 > S.length)
+    if (pos + len - 1 > S.length || pos < 0 || len < 0)
         return false;
 
     for (int i = pos; i < pos + len; i++)

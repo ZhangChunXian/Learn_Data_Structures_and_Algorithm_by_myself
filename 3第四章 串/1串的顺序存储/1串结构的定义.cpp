@@ -1,5 +1,6 @@
 //? 头文件
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 
 //? 宏定义
