@@ -30,7 +30,7 @@ int Index(SString S, SString T);                                  // 定位操�
 bool SubString(SString &Sub, SString S, int pos, int len)           // 求子串. 用Sub返回串S的第pos个字符起长度为len的子串
 {
     // 判断子串范围是否越界
-    if (pos + len - 1 > S.length || pos < 0 || len < 0)
+    if (pos + len - 1 > S.length || pos < 0 || len <= 0)
         return false;
 
     for (int i = pos; i < pos + len; i++)
@@ -45,7 +45,7 @@ bool SubString(SString &Sub, SString S, int pos, int len)           // 求子串
 
 int StrCompare(SString S, SString T)                                  // 比较操作, 若S>T, 则返回值>0, 若S=T, 则返回值=1,若S<T, 则返回值<0
 {
-    for (int i = 1; i <= S.length && i < T.length; i++)
+    for (int i = 1; i <= S.length && i <= T.length; i++)
     {
         if (S.ch[i] != T.ch[i])
         {
