@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main() {
-    char str[50] = "     20203434 rest of";
-    char *remaining = str + strlen(str);
-    long answer = 0;
+    char str[] = "11.03e 0mn";
+    char *end;
 
-    answer = strtol(str, &remaining, 2);
-
-    printf("%d", answer);
+    double number;
+    number = strtod(str, &end);
+    printf("number = %lf", number);
+    printf("\nend string = %s", end);
 
     return 0;
 }
