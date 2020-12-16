@@ -32,7 +32,7 @@ typedef struct {
 
 //? 函数声明
 bool TopologicalSort(Graph G); // 拓扑排序
-bool 
+
 
 //? 函数定义
 bool TopologicalSort(Graph G) {
@@ -50,7 +50,7 @@ bool TopologicalSort(Graph G) {
         Pop(S, i);              // 栈顶元素出栈
         print[count++] = i;     // 输出顶点i
 
-        for (p = G.vertices[i].firstarc; p ; p = p->nextarc) {
+        for (auto p = G.vertices[i].firstarc; p ; p = p->nextarc) {
             // 将所有i指向的顶点入度-1, 并且将入度减为0的顶点压入栈S
             v = p->adjvex;
 
