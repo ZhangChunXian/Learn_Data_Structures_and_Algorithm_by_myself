@@ -5,7 +5,7 @@ typedef struct LNode //定义单链表的结点类型
 {
     int data;           //每个节点存放一个数据元素
     struct LNode *next; //指针指向下一个节点
-} LNode, *Linklist;
+} LNode, *LinkList;
 
 // 初始化一个单链表（带头结点）
 bool InitList(LinkList &L)

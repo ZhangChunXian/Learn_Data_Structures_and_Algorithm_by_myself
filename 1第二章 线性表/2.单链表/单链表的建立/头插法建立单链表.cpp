@@ -7,7 +7,7 @@ typedef struct
     struct LNode *next;
 } LNode, *LinkList;
 
-// 初始化一个带头结点的单链表 
+// 初始化一个带头结点的单链表
 bool InitList(LinkList &L)
 {
     L = (LNode *)malloc(sizeof(LNode));
@@ -20,24 +20,23 @@ bool InitList(LinkList &L)
     return true;
 }
 
-bool ListInsert_to_Head(LinkList &L)
-{
-    int e = 0;
+LinkList ListHeadInsert(LinkList &L) {
+    LNode *s = NULL;
 
-    scanf("%d", &e);
+    int x = 0;
 
-    while (e != 9999)   // 9999只是作为终止输入的数字, 没有其他特殊含义, 其他数字也可以
-    {
-        LNode *r = (LNode *)malloc(sizeof(LNode));
+    L = (LinkList)malloc(sizeof(LNode));
+    L->next = NULL;
+    cin >> x;
 
-        r->next = L->next;
+    while (x != 9999) {
+        s = (LNode *)malloc(sizeof(LNode));
 
-        L->next = r;
-
-        r->data = e;
-
-        scanf("%d", &e);
+        s->data = x;
+        s->next = L->next;
+        L->next = s;
+        cin >> x;
     }
 
-    return true;
+    return L;
 }
