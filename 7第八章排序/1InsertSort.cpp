@@ -79,24 +79,6 @@ void InsertSort3(int A[], int n) {
 
 
 
-
-// 检验程序
-int main()
-{
-    int n = 0;
-    cin >> n;
-
-    int A[n];
-
-    for (int i = 0; i < n; i++)
-    {
-        cin >> A[i];
-    }
-
-    InsertSort(A, n);
-}
-
-
 //! 对链表进行插入排序 leetcode problem 147
 // Definition for singly-linked list.
 struct ListNode {

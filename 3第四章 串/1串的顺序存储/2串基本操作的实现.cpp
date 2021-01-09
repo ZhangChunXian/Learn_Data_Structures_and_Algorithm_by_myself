@@ -22,7 +22,7 @@ bool SubString(SString &Sub, SString S, int pos, int len);          // 求子串
 
 int StrCompare(SString S, SString T);                               // 比较操作, 若S>T, 则返回值>0, 若S=T, 则返回值=1,若S<T, 则返回值<0
 
-int Index(SString S, SString T);                                  // 定位操作. 若主串S中存在与串T值相同的子串, 则返回它在主串S中第一次出现的位置, 否则函数值为0
+int Index(SString S, SString T);                                   // 定位操作. 若主串S中存在与串T值相同的子串, 则返回它在主串S中第一次出现的位置, 否则函数值为0
 
 
 
