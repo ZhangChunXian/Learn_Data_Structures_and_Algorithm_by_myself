@@ -45,7 +45,7 @@ bool IsEmpty(LinkQueue Q)
 void EnQueue(LinkQueue &Q, int x)
 {
     LinkNode *s = (LinkNode *)malloc(sizeof(LinkNode));
-
+    if (s == NULL) return false;
     s->data = x;
 
     s->next = NULL;

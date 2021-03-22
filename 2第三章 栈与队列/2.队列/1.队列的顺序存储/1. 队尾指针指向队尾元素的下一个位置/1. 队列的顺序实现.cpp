@@ -52,6 +52,7 @@ bool EnQueue(SqQueue &Q, int x)
 
     Q.data[Q.rear] = x;              // 将x插入队尾
     Q.rear = (Q.rear + 1) % MAXSIZE; // 队尾指针后移
+    return true;
 }
 
 // 循环队列, 出队操作

@@ -11,5 +11,6 @@
         "maxn",
         "rtag",
         "vexnum"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

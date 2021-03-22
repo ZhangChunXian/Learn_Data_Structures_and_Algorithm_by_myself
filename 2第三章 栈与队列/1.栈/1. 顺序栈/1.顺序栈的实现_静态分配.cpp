@@ -1,10 +1,17 @@
 #include "header.h"
 
+
 typedef struct                // 单个顺序栈
 {
     int data[MAXSIZE];        // 用静态的“数组”存放数据元素
     int top;                  // 栈顶指针
 }SqStack;
+
+
+void InitStack(SqStack &S);   // 初始化顺序栈
+bool Push(SqStack &S, int x); // 进栈操作
+bool Pop(SqStack &S, int &x)  //
+bool GetTop(SqStack S, int &x)// 读取栈顶元素
 
 // 初始化顺序栈
 void InitStack(SqStack &S)

@@ -25,5 +25,4 @@ void BubbleSort(int A[], int n) {
     }
 }
 
-// 冒泡排序适用于链表
 
